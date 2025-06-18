@@ -1,0 +1,53 @@
+/* ===================================
+   Import Fonts
+   =================================== */
+@font-face {
+  font-family: 'Outfit';
+  src: url('../fonts/Outfit-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Outfit Bold';
+  src: url('../fonts/Outfit-Bold.ttf') format('truetype');
+  font-weight: 400;
+}
+
+
+/* ===================================
+   CSS Variables
+   =================================== */
+:root {
+    /* Colors */
+    --primary-300: hsl(212, 45%, 89%);
+    --primary-500: hsl(216, 15%, 48%);
+    --primary-900: hsl(218, 44%, 22%);
+
+    --white: hsl(0, 0%, 100%);
+
+    /* Typography */
+    --text-regular: 400 15px/1.4 'Outfit', sans-serif;
+    --text-bold: 700 22px/1.2 'Outfit Bold', sans-serif;
+
+    --letter-spacing-s: 0px;
+    --letter-spacing-m: 0.2px;
+}
+
+body {
+    font: var(--text-regular);
+    letter-spacing: var(--letter-spacing-m);
+}
+
+h1, h2, h3, h4, h5 {
+    font: var(--text-bold);
+    letter-spacing: var(--letter-spacing-s);
+}
+
+
+
+
+
+
+
+
+
