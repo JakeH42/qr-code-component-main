@@ -10,13 +10,14 @@
 @font-face {
   font-family: 'Outfit Bold';
   src: url('../fonts/Outfit-Bold.ttf') format('truetype');
-  font-weight: 400;
+  font-weight: 700;
 }
 
 
 /* ===================================
    CSS Variables
    =================================== */
+
 :root {
     /* Colors */
     --primary-300: hsl(212, 45%, 89%);
@@ -31,7 +32,19 @@
 
     --letter-spacing-s: 0px;
     --letter-spacing-m: 0.2px;
+
+    /* Spacing */
+    --space-s: clamp(12px, 1vw, 16px);   /* Base ~16px */
+    --space-m: clamp(16px, 1.5vw, 24px); /* Base ~24px */
+    --space-l: clamp(24px, 2vw, 40px);   /* Base ~40px */
+
+    /* Border Radius */
+    --radius-m: 10px;
 }
+
+/* ===================================
+   Global Styles
+   =================================== */
 
 body {
     font: var(--text-regular);
@@ -41,9 +54,64 @@ body {
 h1, h2, h3, h4, h5 {
     font: var(--text-bold);
     letter-spacing: var(--letter-spacing-s);
+    color: var(--primary-900);
 }
 
+p {
+    letter-spacing: var(--letter-spacing-m);
+    color: var(--primary-500);  
+}
 
+.section {
+    width: 100%;
+}
+
+.container {
+    padding: 0 var(--space-m);
+    background-color: var(--primary-300);
+
+    height: 100dvh;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/* ===================================
+   Utility Classes
+   =================================== */
+
+.grid {
+    display: grid;
+}
+
+.grid-center-items {
+    height: 100%;
+    place-items: center;
+}
+
+/* ===================================
+   CSS Components
+   =================================== */
+
+.qr-card {
+    padding: var(--space-s);
+    border-radius: var(--radius-m);
+    background-color: var(--white);
+
+    max-width: 320px;
+}
+
+.qr-card__media {
+    border-radius: var(--radius-m);
+}
+
+.qr-card__body {
+    gap: var(--space-s);
+    padding: var(--space-m);
+    padding-bottom: var(--space-l);
+
+    display: grid;
+    text-align: center;
+}
 
 
 
