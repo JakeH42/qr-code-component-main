@@ -40,6 +40,7 @@
 
     /* Border Radius */
     --radius-m: 10px;
+    --radius-l: 20px;
 }
 
 /* ===================================
@@ -94,7 +95,7 @@ p {
 
 .qr-card {
     padding: var(--space-s);
-    border-radius: var(--radius-m);
+    border-radius: var(--radius-l);
     background-color: var(--white);
 
     max-width: 320px;
